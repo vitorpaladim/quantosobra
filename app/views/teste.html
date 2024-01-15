@@ -1,0 +1,31 @@
+
+  <body>
+    <table id="vm_ga" class="table">
+	<tr>
+    	<th>Google Adwords</th>
+		<td>
+			Verba diária
+			<input name="ga_vd" id="ga_vd" class="real input_geral real" type="text" />
+		</td>
+		<td>
+			Período de veiculação mensal
+			<input name="ga_pvm" id="ga_pvm" class="input_geral_2" type="text" />
+		</td>
+		<td>
+			Verba mensal
+			<input name="ga_eam" id="ga_eam" class="input_geral_2 real" type="text"/>
+		</td>
+	</tr>
+</table>  </body>
+  <script>
+  $(".real").maskMoney({
+	prefix:'R$ ', 
+	thousands:'.', 
+	decimal:','
+})
+const format = { 
+	minimumFractionDigits: 2, 
+	style: 'currency', 
+	currency: 'BRL' 
+}
+  </script>

@@ -1,0 +1,221 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; 
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+          
+    
+.req {
+  color: red;
+}
+
+*:required {
+  background-color: red;
+}    
+
+
+.wrapper {
+    animation: scroll 100s linear infinite;
+    background: url("https://images.unsplash.com/photo-1465146633011-14f8e0781093?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3450&q=80"),
+        #111111;
+
+    height: 100%; 
+    min-width: 1022px; 
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 1000px;
+    perspective-origin: 50% 50%;
+}
+
+@keyframes scroll {
+    100% {
+        background-position: 0px -400%;
+    }
+}
+
+
+
+@media (prefers-reduced-motion) {
+    .wrapper {
+        animation: scroll 800s linear infinite;
+    }
+}
+
+@media (min-width: 670px) {
+    .title {
+        font-size: 5rem;
+    }
+}
+
+
+
+#container {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    width: 100%; 
+    max-width: 1022px; 
+    box-sizing: border-box; 
+    }
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 800px;
+    margin: 0 auto;
+}
+label {
+    margin-bottom: 20px; /* Aumentei a margem inferior das labels */
+    font-size: 20px;
+}
+
+input {
+    padding: 14px; 
+    margin-bottom: 24px;
+}
+
+
+
+
+
+
+
+/* Adicionando estilo ao switch-container */
+.switch-container {
+    display: inline-block;
+}
+
+/* Adicionando estilo ao switch */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    left: 2%;
+}
+
+/* Adicionando estilo ao slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #333;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+/* Adicionando estilo quando o switch está marcado */
+input:checked + .slider {
+    background-color: #ff003b;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/* Adicionando estilo aos sliders arredondados */
+.slider.round {
+    border-radius: 8px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+/* Ocultando o checkbox padrão */
+#abonoPecuniario {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    margin-top: 20;
+}
+
+#adiantar13{
+    opacity: 0;
+    width: 0;
+    height: 0;
+    margin-top: 22;
+}
+
+.custom-button {
+    display: block;
+    width: 240px;
+    height: 48px;
+    line-height: 48px;
+    font-size: 20px;
+    font-family: sans-serif;
+    text-decoration: none;
+    color: #fff;
+    background-color: #333;
+    border: 2px solid #333;
+    letter-spacing: 2px;
+    text-align: center;
+    position: relative;
+    transition: all .35s;
+    cursor: pointer;
+    margin-top: 200px;
+    left: 32%;
+}
+
+        .custom-button span {
+            position: relative;
+            z-index: 2;
+        }
+        .custom-button:after {
+            position: absolute;
+            content: "";
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            background: #ff003b;
+            transition: all .35s;
+        }
+        .custom-button:hover {
+            color: #fff;
+        }
+        .custom-button:hover:after {
+            width: 100%;
+        }
+
+        #resultados {
+    margin-top: 30px;
+    padding: 30px;
+    border: 2px solid #ddd;
+    border-radius: 12px;
+    max-width: 800px; 
+    box-sizing: border-box; 
+}
+
+
+
+
